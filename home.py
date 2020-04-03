@@ -200,6 +200,7 @@ def run_home(user):
 					e.focus_set() 
 
 					def getandreplace(): 
+						global newtext
 						expression = e.get() 
 						newtext=expression.replace('/','/') 
 						newtext=newtext.replace('x','*') 
@@ -207,6 +208,7 @@ def run_home(user):
 					def equals(): 
 						"""when equal is pressed"""
 						getandreplace() 
+						global newtext
 						try: 
 							# evaluate the expression using the eval function 
 							value= eval(newtext) 
